@@ -28,7 +28,7 @@ The -d flag tells r2 to enter debug mode.
 4096 is our binary file to be examined.
 
 
-Inside r2, lets type `aaa`. Radare2 will now analyze all and also perform experimental analyis.
+Inside r2, lets type `aaaa`. Radare2 will now analyze all and also perform experimental analyis.
 ```bash
 $ [0x7fedcfdccc30]> aaaa
 [x] Analyze all flags starting with sym. and entry0 (aa)
