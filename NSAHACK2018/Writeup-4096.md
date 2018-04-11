@@ -1,6 +1,6 @@
 # Information Gathering Phase
 
-We are greated by a 64 bit binary executable file.
+We are greeted by a 64 bit binary executable file.
 
 ```bash
 $ file 4096
@@ -278,6 +278,8 @@ Press `:` again to enter commands.
 ```
 And the flag is revealed.
 
+
+# Patching the binary
 What if we want to win every time without opening r2? 
 
 Reopen r2 with the -w command to enable writing to the binary. This will allow us to patch instructions.
