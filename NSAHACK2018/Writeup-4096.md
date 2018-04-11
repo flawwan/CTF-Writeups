@@ -216,6 +216,10 @@ Let's set a breakpoint at the JE instruction.
 ``` 
 Next we will run the program until a breakpoint occurs.
 
+```bash
+[0x00401462]> dc
+``` 
+
 The game is now showing the GUI, lets lose the game by pressing $q$ to execute the breakpoint. 
 ```bash
 0
@@ -237,7 +241,7 @@ One way to change the flow of the code, is to override the instruction pointer t
 
 If we set the instruction pointer to 0x401462, we will jump to the true condition..
 
-If we type `:` in visual debugging mode, we can type commands into r2 without exiting out.
+If we type `:` in visual debugging mode, we can type commands into r2 without exiting out of the dissasembler.
 
 ```bash
 Press <enter> to return to Visual mode.                         
@@ -268,7 +272,7 @@ Now we are greated with this:
 |      :  :   0x0040149a      call sym.imp.__printf_chk  
 ```
 
-A print we haven't seem before. Let's run the program and see what happens.
+A print we haven't seem before. Let's run the program and see what happens. (As we haven't set any breakpoints, the program will exit when we type `dc`)
 
 Press `:` again to enter commands.
 
@@ -319,6 +323,6 @@ $ ./4096
  CODE [06d716ce2aff203af20f6761]
 ```
 
-Now when we run the patched binary and press q to "win" we get the flag. Much easier than getting a square to be 4096.
+Now when we run the patched binary and press q we "win" and get the flag. Much easier than getting a square to be 4096.
 
 
