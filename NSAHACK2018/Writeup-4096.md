@@ -48,7 +48,7 @@ Using the command `s`, we can seek to a function. Because we know it's a linux c
 [0x7fedcfdccc30]> s main
 [0x004012b0]> 
 ```
-Running $pdf$ we can print the assembly code generated for the function `main`
+Running `pdf` we can print the assembly code generated for the function `main`
 ```assembly
 [0x004012b0]> pdf
             ;-- section..text:
