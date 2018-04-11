@@ -43,7 +43,7 @@ $ [0x7fedcfdccc30]> aaaa
 1303
 ```
 
-Using the command `s`, we can seek to a function. Because we know it's a linux compiled binary it has a main function where the code starts to execute from. Lets seek to that.
+Using the command `s`, we can seek to a function. We know it's a linux compiled binary and it has a main function where the code starts to execute from. Lets seek to that.
 ```bash
 [0x7fedcfdccc30]> s main
 [0x004012b0]> 
@@ -177,7 +177,7 @@ Running `pdf` we can print the assembly code generated for the function `main`
 \  |   `==< 0x0040145d      e972feffff     jmp 0x4012d4
 
 ```
-What would be awesome, you read assembly like you understand and read english. Possible?
+If Assembly Code is your mother tongue, you can exit now because you probably already figured it out.
 Reading assembly is hard and there are no shortcuts.
 
 Let's look at some intresting part of the code above:
@@ -202,8 +202,8 @@ Let's look at some intresting part of the code above:
 Nothing anything familiar? 
 We've seen the string `One square needs to be 4096` earlier when we lost the game intentionally.
 
-Following the code of flow we can see it call two functions, __printf_chk. This we know from running the program. 
-The intresting part is the last line. The assembly instruction $ret$ which will exit the applicaton.
+Following the code of flow we can see it call two functions, `__printf_chk` and `puts`. We know from running the program. 
+The intresting part is the last line. The assembly instruction `ret` which will exit the applicaton.
 
 Okay now look at the first line, a JE instruction.
 JE obviously fails (false), as the code ran when we tested the application.
