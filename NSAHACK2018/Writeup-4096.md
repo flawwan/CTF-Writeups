@@ -9,7 +9,7 @@ $ file 4096
 4096: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=dd063efc944fa4b000e1a9d5d55800087ff3d667, stripped
 ```
 
-Playing the game, we notice we can force exit the application which also prints:
+Playing the game, we notice we can force exit the application by pressing q, which also prints:
 
 ```
 0
