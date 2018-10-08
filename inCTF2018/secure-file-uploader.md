@@ -11,7 +11,7 @@ Here we need to figure out how the challenge works, and figure out what we can e
 
 Here we can see it's a file upload. File uploaders are often insecure, let's upload something.
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/6.png)
-![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/3)
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/3.png)
 We see that the URL say's it a php file, but the error message looks like python. This is probably just a trick to confuse you.
 
 We know from this that it tries to do something with the filename, and we get a error. Let's upload something that does not end with a image extension (.jpg/.png etc).
