@@ -107,7 +107,7 @@ We've found the `__subclasses__`. Now we just have to write the same command wit
 
 Great! Let's extract what we want:
 ```python
->>> dir(().__class__.__base__.__class__)[34]
+>>> dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34]
 '__subclasses__'
 ```
 
