@@ -4,7 +4,7 @@
 
 54/306 = 18% of the teams solved this challenge.
 
-## Phase: Reconnaissance
+## Reconnaissance
 Here we need to figure out how the challenge works, and figure out what we can exploit.
 
 
@@ -62,15 +62,15 @@ subprocesses|os|import|builtins|eval|locals|class|;|file
 and the file must end with a .png.
 
 
-## Phase: Exploit - Python sandbox escape
-From the reconnisance phase we notice the challenge is a Python sandbox escape.
+## Python sandbox escape
+From the reconnaissance phase we notice the challenge is a Python sandbox escape.
 Usually the flag is hidden on the server in a .txt file, so our goal is to read a file.
 
 ```python
 ().__class__.__base__.__subclasses__()[40]("flag.txt").read()
 ```
 
-Here is the line we want to execute, but from the reco phase we know that `__class__` and `__subclasses__` is blacklisted.
+Here is the line we want to execute, but from the reconnaissance phase we know that `__class__` and `__subclasses__` is blacklisted.
 To circumvent this we need to figure out another way to run `__class__` and `__subclasses__`  without actually typing it.
 
 ```python

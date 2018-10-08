@@ -51,7 +51,7 @@ __getitem__
 base
 ```
 
-### Attack
+## Python Sandbox Escape
 
 Our goal is to run the below code. But we cant use [] or builtins:
 ```python
