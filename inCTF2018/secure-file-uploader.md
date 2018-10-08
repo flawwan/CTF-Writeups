@@ -42,11 +42,13 @@ in AttributeError: 'bool' object has no attribute 'png'
 As you can see, when we did the CTF, we fell in the php trap and though the server was running php code. The more we tried, we noticed that it's definately python error messages.
 
 And the breakthrough were when we added a # at the end to comment out the .png part as it seem to be failing on that line.
+
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/5.png)
 
 
 ### Blacklist
 As we try upload some known python names, like __class__.png
+
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/7.png)
 
 ...And there seem to be a blacklist.
