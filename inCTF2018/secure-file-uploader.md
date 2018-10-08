@@ -10,13 +10,13 @@ Here we need to figure out how the challenge works, and figure out what we can e
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/2.png)
 
 Here we can see it's a file upload. File uploaders are often insecure, let's upload something.
-
-6.png
-3.png
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/6.png)
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/3)
 We see that the URL say's it a php file, but the error message looks like python. This is probably just a trick to confuse you.
 
 We know from this that it tries to do something with the filename, and we get a error. Let's upload something that does not end with a image extension (.jpg/.png etc).
-4.png
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/4.png)
+
 
 Okay, uploading something other than `*.png` we get an error. Here we try upload some different payloads and see what the output is.
 
@@ -31,11 +31,13 @@ Okay, uploading something other than `*.png` we get an error. Here we try upload
 As you can see, when we did the CTF, we fell in the php trap and though the server was running php code. The more we tried, we noticed that it's definately python error messages.
 
 And the breakthrough were when we added a # at the end to comment out the .png part as it seem to be failing on that line.
-5.png
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/5.png)
+
 
 ### Blacklist
 As we try upload some known python names, like __class__.png 
-7.png
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/7.png)
+
 ...And there seem to be a blacklist.
 
 Iterating over some known and `useful` python stuff we get the following blacklist:
@@ -110,4 +112,5 @@ Let's combine our payload and upload it to get the flag.
 ```mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"```
 
 
-8.png
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/8.png)
+
