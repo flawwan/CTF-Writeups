@@ -47,7 +47,7 @@ And the breakthrough were when we added a # at the end to comment out the .png p
 
 
 ### Blacklist
-As we try upload some known python names, like __class__.png
+As we try upload some known python names, like `__class__.png`
 
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/7.png)
 
