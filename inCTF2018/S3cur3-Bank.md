@@ -35,7 +35,7 @@ Then it will send 500 credits to account A. Then subtract 500 from the original 
 
 `Account balance after: 500`
 
-Notice something? We've send 1000 credits, but we still have 500 in our account. We've duped 500 credits. Let's apply this theory to practice.
+Notice something? We've sent 500*2 credits, but we still have 500 in our account. Let's apply this theory to practice.
 
 ## Exploiting the bank
 
