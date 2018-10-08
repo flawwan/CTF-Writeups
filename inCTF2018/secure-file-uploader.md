@@ -6,7 +6,7 @@
 ## Phase: Reconnaissance
 Here we need to figure out how the challenge works, and figure out what we can exploit.
 
-2.png
+https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/2.png
 Here we can see it's a file upload. File uploaders are often insecure, let's upload something.
 
 6.png
