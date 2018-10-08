@@ -67,6 +67,5 @@ After running the script back a few times transfering money between A and B. We 
 
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/11.png)
 
-And now we can buy the flag.
 
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/12.png)
