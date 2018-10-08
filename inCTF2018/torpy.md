@@ -16,7 +16,11 @@ Okay we can inject stuff. This is probably a template injection.
 
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/17.png)
 
+It calculates 1*2=2. So this is how we run code on the server.
+
 ![alt text](https://raw.githubusercontent.com/flawwan/CTF-Writeups/master/inCTF2018/images/18.png)
+
+Not allowed to have multiple {{}}, only one.
 
 ## Blacklisted
 ```python
