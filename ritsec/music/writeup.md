@@ -27,6 +27,7 @@ No idea what this is. Googling parts of it we get:
 Music SoftSynth. Seems useful.
 
 ![alt text](3.png "Chall")
+
 Looks very similar to our string.
 
 Lets replace the formula with ours and run the program.
@@ -36,6 +37,7 @@ Lets replace the formula with ours and run the program.
 "Name that tune", that's "Never gonna give you up".
 
 The flag format was revealed by the admin in discord.
+
 ![alt text](4.png "Chall")
 
 And the final flag was:
