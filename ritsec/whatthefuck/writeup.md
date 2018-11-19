@@ -23,3 +23,5 @@ Now we google:
 We find this converter: http://wbic16.xedoloh.com/dvorak.html.
 
 ![alt text](3.png "Chall")
+
+`RITSEC{Isn't_Th1s_a_far_sup3eri0r_keyboard_layout?}`
