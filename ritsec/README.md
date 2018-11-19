@@ -14,10 +14,13 @@ We placed 7 out of 952 teams. The CTF had a lot of challenges and we learnt a lo
 
 There are my writeups for the CTF:
 
-[Archivr](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/archivr/writeup.md)
-[Bucket 'o cash](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/bucketofcash/writeup.md)
-[Crazy Train](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/crazytrain/writeup.md)
-[I am a Stegosaurus](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/iamstegosaurus/writeup.md)
-[Lazy Dev](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/lazyday/writeup.md)
-[Music](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/music/writeup.md)
-[What_Th._Fgck](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/whatthefuck/writeup.md)
+* [Archivr](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/archivr/writeup.md)
+* [Bucket 'o cash](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/bucketofcash/writeup.md)
+* [Crazy Train](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/crazytrain/writeup.md)
+* [I am a Stegosaurus](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/iamstegosaurus/writeup.md)
+* [Lazy Dev](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/lazyday/writeup.md)
+* [Music](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/music/writeup.md)
+* [What_Th._Fgck](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/whatthefuck/writeup.md)
+
+And some writeups from my teammates:
+* [Who drew on my program?](https://github.com/ludvigknutsmark/CTF_WRITEUPS/blob/master/Ritsec2018/who_drew_on_my_program%3F/aesWriteup.md)
