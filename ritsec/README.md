@@ -2,14 +2,15 @@
 
 We placed 7 out of 952 teams. The CTF had a lot of challenges and we learnt a lot.
 
-Place	Team	Score
-1	dcua	7586
-2	WreckItRalph	6486
-3	FireShell	5686
-4	BootCampNSA	5236
-5	OpenToAll	5186
-6	irGeeks	5186
-7	IndianTuesday	4886
+| Place        | Team           | Score  |
+| ------------- |:-------------:| -----:|
+|1              |	dcua            |	7586|
+|2	|WreckItRalph	|6486|
+|3	|FireShell|	5686|
+|4	|BootCampNSA	|5236|
+|5	|OpenToAll	|5186|
+|6	|irGeeks|	5186|
+|7	|IndianTuesday|	4886|
 
 There are my writeups for the CTF:
 
