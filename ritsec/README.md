@@ -12,7 +12,7 @@ We placed 7 out of 952 teams. The CTF had a lot of challenges and we learnt a lo
 |6	|irGeeks|	5186|
 |7	|IndianTuesday|	4886|
 
-There are my writeups for the CTF:
+My writups for the RITSEC CTF 2018:
 
 * [Archivr](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/archivr/writeup.md)
 * [Bucket 'o cash](https://github.com/flawwan/CTF-Writeups/blob/master/ritsec/bucketofcash/writeup.md)
