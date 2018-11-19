@@ -44,15 +44,19 @@ Cool, we have found the upload directory. Let's see if we can browse our file.
 Okay maybe that's not the correct folder.
 
 ## Exploiting LFI Wrappers
-Using this payload we can view the source code of the download.php file as the input is not sanitized correctly.
-```
-http://fun.ritsec.club:8004/index.php?page=php://filter/convert.base64-encode/resource=download
-```
-![alt text](8.png "Download")
-Decoding the base64 we get:
-![alt text](7.png "Download")
-This is the code for the upload page:
+Using this payload we can view the source code of the upload.php file as the input is not sanitized correctly.
+
+`http://fun.ritsec.club:8004/index.php?page=php://filter/convert.base64-encode/resource=upload`
+
 ![alt text](11.png "Download")
+
+Decoding the base64 we get:
+
+![alt text](7.png "Download")
+
+This is the code for the download page:
+
+![alt text](8.png "Download")
 
 
 So the upload folder is
@@ -65,6 +69,7 @@ In PHP `$_SERVER['REMOTE_ADDR']` returns the IP address in the format X.X.X.X of
 What's different with this challenge is that the server is running inside docker (most likely) and behind a reverse proxy.
 
 ![alt text](apache404.png "Download")
+
 If we visit a page that does not exist. We see that the web server is running apache.
 
 ![alt text](nginx.png "Download")
