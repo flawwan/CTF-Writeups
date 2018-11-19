@@ -152,7 +152,7 @@ Concatenating we get the following string:
 $ echo -n "UklUU0VDHe00zbTByHeV9GMHIzHbnMxY3N9HUklUU0VDHe00zbTByHeV9GMHIzHbnMxY3N9H" | base64 -d
 RITSECí4ʹÁÈwôc#1ۜÌXÜßGRITSECí4ʹÁÈwôc#1ۜÌXÜßG
 ```
-Hmmm not the correct one
+Hmmm not the correct one. But we know we're close because we can see the RITSEC at the beginning.
 
 
 Looking at the strings we see that each line ends with a "H". I don't know what this is but if we remove each and every "H".
