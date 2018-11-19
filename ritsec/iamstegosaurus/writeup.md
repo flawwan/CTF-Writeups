@@ -27,7 +27,7 @@ Use `/` to search for a hex string. Enter the `93cf1eca`
 00000000   89 50 4E 47  0D 0A 1A 0A  00 00 00 0D  49 48 44 52  00 00 01 35  00 00 00 E8  08 02 00 00  00 [start]93 CF 1E  CA[end] 00 00 00  .PNG........IHDR...5................
 ```
 
-Look between [start] and [end]. There is our checksum that is wrong. To modify it just select the first byte 93 and type the correct checksum "01aae416". This checksum is the one pngcheck calculated for us.
+Look between [start] and [end]. There is our checksum that is wrong. To modify it just select the first byte "9" and type the correct checksum "01aae416". This checksum is the one pngcheck calculated for us.
 
 ![alt text](3.png "Chall")
 
