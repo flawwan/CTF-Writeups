@@ -25,3 +25,4 @@ My writups for the RITSEC CTF 2018:
 And some writeups from my teammates:
 * [Who drew on my program?](https://github.com/ludvigknutsmark/CTF_WRITEUPS/blob/master/Ritsec2018/who_drew_on_my_program%3F/aesWriteup.md)
 * [mov](https://github.com/happysox/CTF_Writeups/tree/master/RITSEC_CTF_2018/mov)
+* [Nobody uses the eggplant emoji](https://github.com/ludvigknutsmark/CTF_WRITEUPS/blob/master/Ritsec2018/nobody_uses_the_eggplant_emoji/writeup.md)
