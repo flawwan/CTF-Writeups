@@ -27,3 +27,7 @@ And some writeups from my teammates:
 * [mov](https://github.com/happysox/CTF_Writeups/tree/master/RITSEC_CTF_2018/mov)
 * [Nobody uses the eggplant emoji](https://github.com/ludvigknutsmark/CTF_WRITEUPS/blob/master/Ritsec2018/nobody_uses_the_eggplant_emoji/writeup.md)
 * [Yet Another HR Management Framework](https://github.com/happysox/CTF_Writeups/tree/master/RITSEC_CTF_2018/yet_another_hr)
+* [From our friends at nexthop!](https://github.com/henriknero/writeups/tree/master/nexthop)
+* [Gimme sum fud](https://github.com/happysox/CTF_Writeups/tree/master/RITSEC_CTF_2018/gimme_sum_fud)
+* [Freeze writeup RITSEC](https://github.com/henriknero/writeups/blob/master/freeze/README.md)
+* [ReverseMe](https://github.com/happysox/CTF_Writeups/tree/master/RITSEC_CTF_2018/reverseme)
