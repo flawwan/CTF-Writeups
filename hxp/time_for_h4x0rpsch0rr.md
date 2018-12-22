@@ -42,7 +42,7 @@ client.connect('159.69.212.240', 60805, 60)
 client.loop_forever()
 ```
 
-Running the script we get a hidden topic in one of the payloads called `$internal/admin/webcam`. Subscribing to that topic and dumping the payload with this code:
+In the output we see a hidden topic in one of the payloads called `$internal/admin/webcam`. Let's subscribe to that topic and dump the payload:
 ```python
 import paho.mqtt.client as mqtt
 def on_connect(client, userdata, flags, rc):
@@ -58,7 +58,6 @@ client.connect('159.69.212.240', 60805, 60)
 client.loop_forever()
 ```
 
-Running the script and dumping the payload to a file:
 ```bash
 $ python mqtt_script.py > output
 ```
@@ -76,6 +75,8 @@ Opening the image we get the following:
 Okay, we now have the username, password and the OTP token! Lets login on the admin page.
 
 ![alt text](flag.png "Chall")
+
+Fun challenge! 5/5 
 
 
 #### References:
