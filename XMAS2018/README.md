@@ -4,15 +4,17 @@ We placed 31 out of 1378 teams. The CTF featured a lot of fun and creative chall
  
 My writups:
 
-* Santa's Helper Mechagnome (Web, Command Injection)
-* Our Christmas wishlist (Web, XXE)
-* Gnome's BU77ons (Web)
-* GnomeArena: Rock Paper Scissors (Web, File upload)
-* A Weird List of Sequences (Misc, oeis.org)
-* Reindeers and cookies (Web, cookies, type juggling)
-* Santa's No Password Login System (Web, sqli UA)
-* Message from Santa (Forensics)
-* Our Christmas wishlist (Web, file upload, unzip relative)
-* Santa's lucky number (Web)
+* [Santa's Helper Mechagnome (Web, Command Injection)](Santas%20helper%20mechagnome/writeup.md)
+* [Our Christmas wishlist (Web, XXE)](Our%20Christmas%20Wishlist/writeup.md)
+* [Gnome's BU77ons (Web)](Gnome%20Bu77ons/writeup.md)
+* [GnomeArena: Rock Paper Scissors (Web, File upload)](GnomeArena/writeup.md)
+* [A Weird List of Sequences (Misc, oeis.org)]()
+* [Reindeers and cookies (Web, cookies, type juggling)](Reindeers%20and%20cookies/writeup.md)
+* [Santa's No Password Login System (Web, sqli UA)](Santa's%20No%20Password%20Login%20System/writeup.md)
+* [Message from Santa (Forensics)](Message%20from%20Santa/writeup.md)
+* [Santa's lucky number (Web)](Santas%20Lucky%20Number/writeup.md)
+* [Super Secure Siberian Vault (Web, File upload)](Siberian%20Secure%20Vault/writeup.md)
+* [Let's Crack the Great lapland monolith (Web, LCG)](Let's%20Crack%20the%20Great%20lapland%20monolith/writeup.md)
+* [Krampus](Krampus/writeup.md)
 
 And some writeups from my teammates:
