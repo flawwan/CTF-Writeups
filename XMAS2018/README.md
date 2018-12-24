@@ -18,3 +18,6 @@ My writups:
 * [Krampus](Krampus/writeup.md)
 
 And some writeups from my teammates:
+
+* [Friedrich's Christmas Hangover](https://github.com/happysox/CTF_Writeups/blob/master/XMAS_CTF_2018/friedrich/README.md)
+* [Santa thinks you're trustworthy](https://github.com/happysox/CTF_Writeups/tree/master/XMAS_CTF_2018/trustworthy)
