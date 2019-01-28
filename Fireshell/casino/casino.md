@@ -95,7 +95,7 @@ If we look closer to the srand call:
    0x0000000000400ae0 <+161>:   call   0x400870 <srand@plt>
 ```
 
-It seems like it fetched something from `rip+0x201548`. 
+It seems like it fetched something from `0x602020`. 
 
 ```asm
 gdb-peda$ x/wx 0x602020
