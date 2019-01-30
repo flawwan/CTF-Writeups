@@ -337,7 +337,8 @@ This will make the condition pass with flying colors:
 
 9*100 <= 100.
 
-![alt text](img/3.png "Chall")
+
+![alt text](img/4.png "Chall")
 
 
 Thanks again to @happysox for exploiting the pritnf vulnerability and solving the final steps of the challenge!
