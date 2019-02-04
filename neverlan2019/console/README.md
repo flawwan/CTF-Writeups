@@ -1,4 +1,4 @@
-# Cookie_Monster (Web)
+# Console (Web)
 
 Hi CTF player. If you have any questions about the writeup or challenge. Submit a issue and I will try to help you understand.
 
