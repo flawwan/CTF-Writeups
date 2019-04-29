@@ -1,4 +1,4 @@
-# Eye in the sky
+# Lost in the jungle 
 
 I'm the author of this challenge. This is my thoughts on how to solve the challenge.
 

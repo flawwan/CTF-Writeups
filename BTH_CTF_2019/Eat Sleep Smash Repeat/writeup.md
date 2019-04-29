@@ -40,7 +40,7 @@ Time to fire up Python and automate this.
 
 ![alt text](7.png "Chall")
 
-```
+```python
 import requests
 import thread
 from PIL import Image
