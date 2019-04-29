@@ -43,7 +43,7 @@ The extract image size is quite low:
 
 Running stegsolve is a dead end. Nothing in strings or exifdata. 
 
-For image files there is possible to hide information outside the size of the image. This is quite common in CTF challenges.
+For image files there is possible to modify the width and height of the image. This is quite common in CTF challenges.
 
 You can manually hexedit the height of the image or use a tool I've written ([modsize](https://github.com/flawwan/modsize))
 
