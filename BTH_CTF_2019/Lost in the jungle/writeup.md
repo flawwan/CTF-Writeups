@@ -3,8 +3,6 @@
 I'm the author of this challenge. This is my thoughts on how to solve the challenge.
 
 
-![alt text](1.png "Chall")
-
 We are given a iso file.
 
 ```
